@@ -1,0 +1,17 @@
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    border-bottom: 1px solid teal;
+}
+
+.nav-title {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 18px;
+    margin: 0;
+    cursor: pointer;
+}
