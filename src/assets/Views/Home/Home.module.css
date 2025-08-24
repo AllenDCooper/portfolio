@@ -18,7 +18,7 @@ img {
 
 .bio {
   width: 600px;
-  max-width: 100vw;
+  max-width: 100%;
   text-align: justify;
 }
 
@@ -41,4 +41,11 @@ img {
 
 .nav-button:hover {
   background-color: #efefef;
+}
+
+@media (max-width: 600px) {
+  .home-container {
+    padding: 20px;
+    width: auto;
+  }
 }
