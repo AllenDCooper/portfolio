@@ -24,16 +24,19 @@ img {
 
 .nav-button-container {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 12px;
 }
 
 .nav-button {
-  width: 120px;
-  margin: 6px;
+  /* width: 120px; */
   cursor: pointer;
   padding: 6px 0px;
   background-color: transparent;
   border: 1px solid teal;
   border-radius: 2px;
+  width: 30%;
 }
 
 .nav-button:hover {
