@@ -19,7 +19,8 @@ const ProjectCard = ({ project, setOpenProject }: reactProps) => {
       <header><button onClick={() => setOpenProject(null)}>Back to Projects</button></header>
       <div className={styles["project-card-container"]}>
         <div className={styles["project-card-info-wrapper"]}>
-          <p>{project.title}</p>
+          <p className={styles["project-card-title"]}>{project.title}</p>
+          <p className={styles["project-card-short-description"]}>{project.shortDescription}</p>
           <p>{project.description}</p>
         </div>
         <IframeResizer
