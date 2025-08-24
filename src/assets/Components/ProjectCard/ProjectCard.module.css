@@ -1,0 +1,22 @@
+.project-card-container {
+  margin: 12px 0px;
+  padding: 12px 6px;
+  background-color: #efefef;
+  display: flex;
+}
+
+.project-card-container>* {
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .project-card-container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .project-card-container > iframe {
+    margin-left: 0px !important;
+    max-width: 100% !important;
+  }
+}
