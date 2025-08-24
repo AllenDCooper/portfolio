@@ -1,11 +1,8 @@
-import type { Dispatch, SetStateAction } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 
-interface reactProps {
-  setView: Dispatch<SetStateAction<string>>
-}
+const Home = () => {
 
-const Home = ({ setView }: reactProps) => {
   return (
     <main className={styles["home-container"]}>
       <img className={styles["headshot"]} src="./assets/headshot-cutout.jpg" alt="headshot" />
@@ -15,9 +12,9 @@ const Home = ({ setView }: reactProps) => {
         </p>
       </article>
       <section className={styles["nav-button-container"]}>
-        <button className={styles["nav-button"]} onClick={() => setView("projects")}>Projects</button>
-        <button className={styles["nav-button"]} onClick={() => setView("posts")}>Posts</button>
-        <button className={styles["nav-button"]} onClick={() => setView("contact")}>Contact</button>
+        <Link to="/projects" className={styles["nav-button"]}>Projects</Link>
+        <Link to="/projects" className={styles["nav-button"]}>Posts</Link>
+        <Link to="/projects" className={styles["nav-button"]}>Contact</Link>
       </section>
     </main>
   )

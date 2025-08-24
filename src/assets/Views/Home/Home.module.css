@@ -34,9 +34,12 @@ img {
   cursor: pointer;
   padding: 6px 0px;
   background-color: transparent;
-  border: 1px solid teal;
+  border: 1px solid black;
   border-radius: 2px;
   width: 30%;
+  text-decoration: none;
+  color: black;
+  text-align: center;
 }
 
 .nav-button:hover {

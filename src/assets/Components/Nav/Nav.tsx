@@ -1,14 +1,12 @@
-import type { Dispatch, SetStateAction } from "react";
+import { Link } from "react-router-dom"
 import styles from "./Nav.module.css"
 
-interface reactProps {
-  setView: Dispatch<SetStateAction<string>>
-}
+const Nav = () => {
 
-const Nav = ({ setView }: reactProps) => {
   return (
     <nav className={styles["nav-container"]}>
-      <span className={styles["nav-title"]} onClick={() => setView("home")}>Allen Cooper</span>
+      {/* <span className={styles["nav-title"]} onClick={handleNavigation}>Allen Cooper</span> */}
+      <Link className={styles["nav-title"]} to="/">Allen Cooper</Link>
     </nav>
   )
 }
