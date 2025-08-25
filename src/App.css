@@ -2,4 +2,19 @@ body {
   font-family: "Roboto Serif", serif;
   font-weight: 400;
   font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin: 0px;
+}
+
+.view-heading {
+  text-align: center;
+  margin: 24px 0px;
+}
+
+.view-text {
+  text-align: center;
+  margin: 36px auto;
+  max-width: 1000px;
+
 }

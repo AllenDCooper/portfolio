@@ -7,6 +7,7 @@ export type Project = {
         link?: string
     }>,
     description: string,
+    imageSrc: string,
     height?: string,
     width?: string,
     marginLeft?: string,

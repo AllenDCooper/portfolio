@@ -18,14 +18,44 @@
   font-style: italic;
 }
 
+.back-btn-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.back-btn {
+  /* width: 120px; */
+  cursor: pointer;
+  padding: 6px 0px;
+  /* color: black;
+    background-color: transparent;
+    border: 1px solid black; */
+  color: white;
+  background-color: teal;
+  border-radius: 2px;
+  border: 1px solid teal;
+  width: 30%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.back-btn:hover {
+  background-color: #efefef;
+  color: black;
+}
+
 @media (max-width: 600px) {
   .project-card-container {
     flex-direction: column;
     max-width: 100%;
   }
 
-  .project-card-container > iframe {
+  .project-card-container>iframe {
     margin-left: 0px !important;
     max-width: 100% !important;
+  }
+
+  .project-card-container>* {
+    width: 100%;
   }
 }

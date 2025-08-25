@@ -1,0 +1,33 @@
+.footer-container {
+    /* position: absolute;
+    bottom: 0px; */
+    width: 100%;
+    min-height: 40px;
+    /* background-color: #efefef; */
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid teal;
+}
+
+.footer-container>* {
+    width: 100%;
+    color: white;
+    text-align: center;
+}
+
+/* .footer-container > *:last-child {
+    text-align: right;
+    margin-right: 12px;
+} */
+
+@media (max-width: 600px) {
+    /* .footer-container>*:first-child {
+        display: none;
+    } */
+    .footer-container > * {
+        text-align: center;
+    }
+}

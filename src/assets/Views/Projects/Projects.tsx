@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import ProjectCard from '../../Components/ProjectCard/ProjectCard';
 import styles from './Projects.module.css';
+import '../../../App.css';
 import type { Project } from '../../../types/project.types';
 
 const projects_data = [
@@ -163,8 +164,9 @@ const Projects = () => {
 
   return (
     <section className={styles["projects-container"]}>
-      <h2>Projects</h2>
-      <p>These are some of the software development kits (SDKs) I've built for W. W. Norton & Company. Most of these are microservices that are built into e-books and assessments.</p>
+      <h2 className="view-heading">Code</h2>
+      <p className="view-text">These are some of the software development kits (SDKs) I've built for W. W. Norton & Company.</p>
+      {/* <p className="view-text">Most of these are microservices that are built into e-books and assessments.</p> */}
       {openProject ?
         <ProjectCard project={openProject} setOpenProject={setOpenProject} />
         :
