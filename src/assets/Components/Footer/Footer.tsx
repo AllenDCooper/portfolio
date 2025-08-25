@@ -10,9 +10,11 @@ const Footer = ({ footerRef }: reactProps) => {
 
   return (
     <footer className={styles["footer-container"]} ref={footerRef}>
-      {/* <span></span> */}
-      <object className="email" width="260" height="24" data={email} type="image/svg+xml"></object>
-      {/* <a href="https://www.linkedin.com/in/allendcooper/" target="_blank">LinkedIn</a> */}
+      {/* <span> */}
+        <object className="email" width="140" height="24" data={email} type="image/svg+xml"></object>
+        <span>|</span>
+        <a href="https://www.linkedin.com/in/allendcooper/" target="_blank">LinkedIn</a>
+      {/* </span> */}
     </footer>
   )
 }

@@ -7,6 +7,10 @@ body {
   margin: 0px;
 }
 
+.main-container {
+  margin: 0 12px;
+}
+
 .view-heading {
   text-align: center;
   margin: 24px 0px;
@@ -16,5 +20,4 @@ body {
   text-align: center;
   margin: 36px auto;
   max-width: 1000px;
-
 }

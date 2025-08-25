@@ -26,12 +26,12 @@ function App() {
       const fillNeeded = maxHeight - navHeight - footerHeight
       setMainHeight(fillNeeded)
     }
-  })
+  }, [navRef, footerRef])
 
   return (
     <>
       <Nav navRef={navRef} />
-      <div ref={mainRef} style={{ minHeight: `${mainHeight}px` }}>
+      <div className="main-container" ref={mainRef} style={{ minHeight: `${mainHeight}px` }}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/code" element={<Projects />} />

@@ -44,6 +44,38 @@
   color: black;
 }
 
+.project-card-info-wrapper {
+  padding: 0px 6px;
+}
+
+.img-carousel-wrapper {
+  margin: 30px;
+  position: relative;
+}
+
+.img-carousel-wrapper>button {
+  position: absolute;
+  /* background-color: transparent; */
+  border: none;
+  cursor: pointer;
+  height: 100%;
+}
+
+.img-carousel-wrapper>button:hover {
+  /* background-color: white; */
+  box-shadow: 0 0 2px 0 gray;
+}
+
+.img-carousel-back-btn {
+  left: -30px;
+  top: 0%;
+}
+
+.img-carousel-next-btn {
+  right: -30px;
+  top: 0%;
+}
+
 @media (max-width: 600px) {
   .project-card-container {
     flex-direction: column;

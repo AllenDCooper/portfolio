@@ -8,7 +8,7 @@ const Home = () => {
       <img className={styles["headshot"]} src="./assets/headshot-cutout.jpg" alt="headshot" />
       <article className={styles["bio"]}>
         <p>
-          I am a technical program manager with over ten years of experience in edtech / educational publishing. I live in New York City with my wife and my cat.
+          I am a technical program manager with over ten years of experience in edtech and educational publishing. I live in New York City with my wife and my cat.
         </p>
       </article>
       <section className={styles["nav-button-container"]}>

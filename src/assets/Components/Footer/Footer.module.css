@@ -7,15 +7,17 @@
     background-color: black;
     color: white;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: center;
     align-items: center;
     border-top: 1px solid teal;
 }
 
 .footer-container>* {
-    width: 100%;
+    /* width: 100%; */
     color: white;
     text-align: center;
+    margin: 0px 4px;
 }
 
 /* .footer-container > *:last-child {
