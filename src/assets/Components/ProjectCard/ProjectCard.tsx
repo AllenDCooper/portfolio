@@ -53,19 +53,44 @@ const ProjectCard = ({ project, setOpenProject }: reactProps) => {
           Array.isArray(project.imageSrc) && project.imageSrc.length > 1 ?
             <div>
               {project.imageSrc.map((img, imgIndex) => (
-                <div className={styles["img-carousel-wrapper"]} hidden={imgIndex !== curImage}>
-                  <button className={styles["img-carousel-back-btn"]} onClick={() => handleImageChange(imgIndex, "previous")} hidden={imgIndex === 0}>
-                    <span className="material-symbols-outlined">
-                      arrow_back_ios
-                    </span>
-                  </button>
-                  <img style={{ width: project.width || "auto" }} src={img} />
-                  <button className={styles["img-carousel-next-btn"]} onClick={() => handleImageChange(imgIndex, "next")} hidden={imgIndex + 1 === project.imageSrc.length}>
-                    <span className="material-symbols-outlined">
-                      arrow_forward_ios
-                    </span>
-                  </button>
-                </div>
+                typeof img === "string" ?
+                  <div className={styles["img-carousel-wrapper"]} hidden={imgIndex !== curImage}>
+                    <button className={styles["img-carousel-back-btn"]} onClick={() => handleImageChange(imgIndex, "previous")} hidden={imgIndex === 0}>
+                      <span className="material-symbols-outlined">
+                        arrow_back_ios
+                      </span>
+                    </button>
+                    <img style={{ width: project.width || "auto" }} src={img} />
+                    <button className={styles["img-carousel-next-btn"]} onClick={() => handleImageChange(imgIndex, "next")} hidden={imgIndex + 1 === project.imageSrc.length}>
+                      <span className="material-symbols-outlined">
+                        arrow_forward_ios
+                      </span>
+                    </button>
+                  </div>
+                  :
+                  <div className={styles["img-carousel-wrapper"]} hidden={imgIndex !== curImage}>
+                    <button className={styles["img-carousel-back-btn"]} onClick={() => handleImageChange(imgIndex, "previous")} hidden={imgIndex === 0}>
+                      <span className="material-symbols-outlined">
+                        arrow_back_ios
+                      </span>
+                    </button>
+                    <div style={{ width: project.width || "auto" }}>
+                      {img.type === "embed" ?
+                        <iframe width="100%" height="420px" src={img.source} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                        :
+                        <video
+                        poster={img.poster ? img.poster : ""}
+                        style={{ width: project.width || "auto", height: "420px" }} controls>
+                          <source src={img.source} />
+                        </video>
+                      }
+                    </div>
+                    <button className={styles["img-carousel-next-btn"]} onClick={() => handleImageChange(imgIndex, "next")} hidden={imgIndex + 1 === project.imageSrc.length}>
+                      <span className="material-symbols-outlined">
+                        arrow_forward_ios
+                      </span>
+                    </button>
+                  </div>
               ))}
             </div>
             :

@@ -13,11 +13,25 @@ body {
 
 .view-heading {
   text-align: center;
-  margin: 24px 0px;
+  padding: 24px 0px;
+  margin: 0px;
 }
 
 .view-text {
   text-align: center;
   margin: 36px auto;
   max-width: 1000px;
+}
+
+.blockquote {
+  padding: 0px 12px;
+  font-style: italic;
+  font-size: 12px;
+  /* box-shadow: 0 0 3px 0px gray; */
+  /* border-radius: 4px; */
+  margin-left: 0px;
+  /* border-top: 1px solid gray; */
+  margin: 24px 16px;
+  /* border-bottom: 1px solid gray; */
+  border-left: 10px solid teal;
 }

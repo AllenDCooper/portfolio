@@ -7,6 +7,9 @@ import Discovery from './assets/Views/Discovery/Discovery';
 import Data from './assets/Views/Data/Data';
 import Footer from './assets/Components/Footer/Footer';
 import { useEffect, useRef, useState } from 'react';
+import Innovation from './assets/Views/Innovation/Innovation';
+import Posts from './assets/Views/Posts/Posts';
+import Contact from './assets/Views/Contact/Contact';
 
 function App() {
 
@@ -18,7 +21,7 @@ function App() {
 
   useEffect(() => {
     if (navRef && navRef.current && footerRef && footerRef.current) {
-      const docHeight = document.body.offsetHeight 
+      const docHeight = document.body.offsetHeight
       const windowHeight = window.innerHeight || document.body.clientHeight
       const maxHeight = Math.max(docHeight, windowHeight)
       const navHeight = navRef.current.offsetHeight
@@ -37,6 +40,9 @@ function App() {
           <Route path="/code" element={<Projects />} />
           <Route path="/discovery" element={< Discovery />} />
           <Route path="/data" element={< Data />} />
+          <Route path="/innovation" element={< Innovation />} />
+          <Route path="/posts" element={< Posts />} />
+          <Route path="/contact" element={< Contact />} />
           <Route path="/*" element={<div>Error</div>} />
         </Routes>
       </div>

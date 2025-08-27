@@ -7,7 +7,7 @@ export type Project = {
         link?: string
     }>,
     description: string,
-    imageSrc: string | Array<string>,
+    imageSrc: string | Array<string | {type: string, source: string, poster?: string}>,
     height?: string,
     width?: string,
     marginLeft?: string,
