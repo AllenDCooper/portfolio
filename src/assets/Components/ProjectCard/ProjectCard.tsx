@@ -79,8 +79,8 @@ const ProjectCard = ({ project, setOpenProject }: reactProps) => {
                         <iframe width="100%" height="420px" src={img.source} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                         :
                         <video
-                        poster={img.poster ? img.poster : ""}
-                        style={{ width: project.width || "auto", height: "420px" }} controls>
+                          poster={img.poster ? img.poster : ""}
+                          style={{ width: project.width || "100%", height: "420px" }} controls>
                           <source src={img.source} />
                         </video>
                       }
