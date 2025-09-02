@@ -97,7 +97,7 @@ const projects_data = [
   {
     title: "writing interactive",
     url: "https://d13b7vh8ooopw0.cloudfront.net/index.html#/example/demo?preview=on",
-    shortDescription: "guided free-writing activities that help help students build confidence as writers through repeated practice",
+    shortDescription: "guided free-writing activities that help students build confidence as writers through repeated practice",
     tags: [
       {
         text: "React Typescript",
