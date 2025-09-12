@@ -4,11 +4,11 @@ import ProjectCard from '../../Components/ProjectCard/ProjectCard';
 
 const projects_data = [
   {
-    title: "The Digital Development Studio (PMO)",
+    title: "The Digital Development Studio",
     url: "",
     shortDescription: "Implement best practices, compliance checks, and risks mitigation activities for hundreds of digital projects.",
     tags: [],
-    description: "This is a project management office (PMO) I founded with five other key stakeholders to improve governance of digital publishing program.",
+    description: "This is a center of excellence (CoE) I founded with five other key stakeholders to improve governance of digital publishing program.",
     imageSrc: ["./assets/flight-cycle.png", "./assets/dds.png", "./assets/dds-2.png"],
     width: "900px"
   },
