@@ -10,6 +10,7 @@ import { useEffect, useRef, useState } from 'react';
 import Innovation from './assets/Views/Innovation/Innovation';
 import Posts from './assets/Views/Posts/Posts';
 import Contact from './assets/Views/Contact/Contact';
+import ProjectManagement from './assets/Views/ProjectManagement/ProjectManagement';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
           <Route path="/discovery" element={< Discovery />} />
           <Route path="/data" element={< Data />} />
           <Route path="/innovation" element={< Innovation />} />
+          <Route path="/project-management" element={< ProjectManagement />} />
           <Route path="/posts" element={< Posts />} />
           <Route path="/contact" element={< Contact />} />
           <Route path="/*" element={<div>Error</div>} />

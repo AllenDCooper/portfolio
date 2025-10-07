@@ -16,6 +16,7 @@ const Home = () => {
         <Link to="/code" className={styles["nav-button"]}>Code</Link>
         <Link to="/data" className={styles["nav-button"]}>Data</Link>
         <Link to="/innovation" className={styles["nav-button"]}>Innovation</Link>
+        <Link to="/project-management" className={styles["nav-button"]}>Project Management</Link>
         <Link to="/posts" className={styles["nav-button"]}>Posts</Link>
         <Link to="/contact" className={styles["nav-button"]}>Contact</Link>
       </section>
