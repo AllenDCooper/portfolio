@@ -16,9 +16,9 @@ const projects_data = [
   {
     title: "JIRA epics for textbook programs",
     url: "",
-    shortDescription: "Utilized JIRA tickets to manage complicated textbook projects often 1-3 years at Macmillan Learning",
+    shortDescription: "Utilized JIRA tickets to manage complicated textbook projects (often 1-3 years in duration) at Macmillan Learning",
     tags: [],
-    description: "<p>At Macmillan Learning, I managed a a number of large textbook projects (print and digital) in the communication and college success disciplines throughout the entire lifecycle: market research, opportunity selection, definining requirements/acceptance criteria, delivery, acceptance testing, maintanence, and retirement. All of this was tracked using Jira tickets, organized into epics.</p>",
+    description: "<p>At Macmillan Learning, I managed a a number of large textbook projects (print and digital) in the communication and college success disciplines throughout the entire lifecycle: market research, opportunity selection, definining requirements/acceptance criteria, delivery, acceptance testing, maintanence, and retirement. Nearly all of these activities were tracked using Jira tickets, organized into epics, and reported biweekly to a large group of stakeholders.</p>",
     imageSrc: ["./assets/ebook-cs.png", "./assets/lc.png", "./assets/los.png", "./assets/aces.png"],
     width: "400px"
   }
