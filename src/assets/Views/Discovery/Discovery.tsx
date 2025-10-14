@@ -45,7 +45,7 @@ const Discovery = () => {
   return (
     <section className={styles["discovery-container"]}>
       <h2 className="view-heading">Discovery</h2>
-      <p className="view-text">In my experience, teams are able to use technology well when they align it to a well-defined customer problem. These are some of the resources I have developed to help teams discover good technical solutions (and pivot away from poor ones).</p>
+      <p className="view-text">In my experience, teams are able to use technology well when they align it to a well-defined customer problem. These are some of the resources I have developed to discover good technical solutions (and pivot away from poor ones).</p>
       {projects_data.map(project => (
         <ProjectCard project={project} />
       ))}
