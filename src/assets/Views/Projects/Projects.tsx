@@ -165,7 +165,7 @@ const Projects = () => {
   return (
     <section className={styles["projects-container"]}>
       <h2 className="view-heading">Code</h2>
-      <p className="view-text">These are some of the software development kits (SDKs) I've built for W. W. Norton & Company.</p>
+      <p className="view-text">These are some of the software development kits (SDKs) I've developed at W. W. Norton & Company. These kits are vital building blocks for engaging readers and powering digital books that live. Over 400 interactives have been built and released with these kits.</p>
       {/* <p className="view-text">Most of these are microservices that are built into e-books and assessments.</p> */}
       {openProject ?
         <ProjectCard project={openProject} setOpenProject={setOpenProject} />
