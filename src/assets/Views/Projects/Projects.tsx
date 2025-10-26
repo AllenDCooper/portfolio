@@ -114,6 +114,25 @@ const projects_data = [
     imageSrc: "./assets/writing-activity.png"
   },
   {
+    title: "math formula",
+    url: "https://equation-converter-666653.gitlab.io/",
+    shortDescription: "a kit for converting formulas created in Microsoft Word using Equation Editor to MathML (web standard for accessibility and usability)",
+    tags: [
+      {
+        text: "React Typescript",
+        link: "https://vite.dev/"
+      },
+      {
+        text: "Norton Design System",
+        link: "https://wwnorton.github.io/design-system/"
+      }
+    ],
+    description: "",
+    width: "800px",
+    marginLeft: "0px",
+    imageSrc: "./assets/math-converter.png"
+  },
+  {
     title: "graphing model",
     url: "https://main.d2f8ifo7jr8kf0.amplifyapp.com/#/exponential",
     shortDescription: "dynamic data visualizations that help students better understand a complex model",
