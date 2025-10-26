@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ProjectCard from '../../Components/ProjectCard/ProjectCard';
 import styles from './Projects.module.css';
 import '../../../App.css';
 import type { Project } from '../../../types/project.types';
+import { useSearchParams } from 'react-router-dom';
 
 const projects_data = [
   {
@@ -116,7 +117,7 @@ const projects_data = [
   {
     title: "math formula",
     url: "https://equation-converter-666653.gitlab.io/",
-    shortDescription: "a kit for converting formulas created in Microsoft Word using Equation Editor to MathML (web standard for accessibility and usability)",
+    shortDescription: "a production kit for converting formulas created in Microsoft Word to MathML (web standard for accessibility and usability)",
     tags: [
       {
         text: "React Typescript",
@@ -125,6 +126,10 @@ const projects_data = [
       {
         text: "Norton Design System",
         link: "https://wwnorton.github.io/design-system/"
+      },
+      {
+        text: "MathJax",
+        link: "https://www.mathjax.org/"
       }
     ],
     description: "",
@@ -179,7 +184,26 @@ const projects_data = [
 
 const Projects = () => {
 
-  const [openProject, setOpenProject] = useState<Project | null>(null)
+  const [searchParams] = useSearchParams();
+
+  const getProject = (params: URLSearchParams) => {
+    if (params && params.get("project")) {
+      const projectName = params.get("project")
+      console.log(projectName)
+      const projectLookup = projects_data.filter(el => el.title.replaceAll(" ", "-") === projectName)[0] || null
+      console.log(projectLookup)
+      return (projectLookup)
+    } else {
+      return null
+    }
+  }
+
+  const [openProject, setOpenProject] = useState<Project | null>(getProject(searchParams))
+
+  useEffect(() => {
+    console.log(searchParams)
+    setOpenProject(getProject(searchParams))
+  }, [searchParams])
 
   return (
     <section className={styles["projects-container"]}>
