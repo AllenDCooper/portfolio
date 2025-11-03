@@ -1,0 +1,93 @@
+.project-card-container {
+  margin: 12px 0px;
+  padding: 12px 6px;
+  background-color: #efefef;
+  display: flex;
+}
+
+.project-card-container>* {
+  width: 50%;
+}
+
+.project-card-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.project-card-short-description {
+  font-style: italic;
+}
+
+.back-btn-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.back-btn {
+  /* width: 120px; */
+  cursor: pointer;
+  padding: 6px 0px;
+  /* color: black;
+    background-color: transparent;
+    border: 1px solid black; */
+  color: white;
+  background-color: teal;
+  border-radius: 2px;
+  border: 1px solid teal;
+  width: 30%;
+  text-decoration: none;
+  text-align: center;
+}
+
+.back-btn:hover {
+  background-color: #efefef;
+  color: black;
+}
+
+.project-card-info-wrapper {
+  padding: 0px 6px;
+}
+
+.img-carousel-wrapper {
+  margin: 30px;
+  position: relative;
+}
+
+.img-carousel-wrapper>button {
+  position: absolute;
+  /* background-color: transparent; */
+  border: none;
+  cursor: pointer;
+  height: 100%;
+}
+
+.img-carousel-wrapper>button:hover {
+  /* background-color: white; */
+  box-shadow: 0 0 2px 0 gray;
+}
+
+.img-carousel-back-btn {
+  left: -30px;
+  top: 0%;
+}
+
+.img-carousel-next-btn {
+  right: -30px;
+  top: 0%;
+}
+
+@media (max-width: 600px) {
+  .project-card-container {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .project-card-container>iframe {
+    margin-left: 0px !important;
+    max-width: 100% !important;
+  }
+
+  .project-card-container>* {
+    width: 100%;
+  }
+}

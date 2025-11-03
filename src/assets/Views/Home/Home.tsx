@@ -13,6 +13,7 @@ const Home = () => {
       </article>
       <section className={styles["nav-button-container"]}>
         <Link to="/discovery" className={styles["nav-button"]}>Discovery</Link>
+        <Link to="/designs" className={styles["nav-button"]}>Designs</Link>
         <Link to="/code" className={styles["nav-button"]}>Code</Link>
         <Link to="/data" className={styles["nav-button"]}>Data</Link>
         <Link to="/innovation" className={styles["nav-button"]}>Innovation</Link>

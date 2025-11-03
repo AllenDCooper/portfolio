@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Files
+.public/assets/designs/schematic-figure_v2.gif
+

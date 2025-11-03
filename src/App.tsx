@@ -11,6 +11,7 @@ import Innovation from './assets/Views/Innovation/Innovation';
 import Posts from './assets/Views/Posts/Posts';
 import Contact from './assets/Views/Contact/Contact';
 import ProjectManagement from './assets/Views/ProjectManagement/ProjectManagement';
+import Designs from './assets/Views/Designs/Designs';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/code" element={<Projects />} />
+          <Route path="/designs" element={<Designs />} />
           <Route path="/discovery" element={< Discovery />} />
           <Route path="/data" element={< Data />} />
           <Route path="/innovation" element={< Innovation />} />
