@@ -89,7 +89,7 @@ const projects_data = [
     thumbnail: "./assets/designs/schematic-figure_v2.png"
   },
   {
-    title: "Sticky scrolling",
+    title: "Sticky Scrolling",
     gif: "./assets/designs/sticky.gif",
     shortDescription: "CSS sticky scrolling solution to handle media with annotations",
     tags: [
@@ -106,7 +106,7 @@ const projects_data = [
     thumbnail: "./assets/designs/sticky.png"
   },
   {
-    title: "writing activity",
+    title: "Writing Activity",
     gif: "./assets/designs/writing-activity-ebook.gif",
     shortDescription: "Guided free-writing activities",
     tags: [
