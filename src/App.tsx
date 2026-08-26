@@ -6,7 +6,7 @@ import Projects from './assets/Views/Projects/Projects';
 import Discovery from './assets/Views/Discovery/Discovery';
 import Data from './assets/Views/Data/Data';
 import Footer from './assets/Components/Footer/Footer';
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import Innovation from './assets/Views/Innovation/Innovation';
 import Posts from './assets/Views/Posts/Posts';
 import Contact from './assets/Views/Contact/Contact';
@@ -19,24 +19,26 @@ function App() {
   const mainRef = useRef<HTMLDivElement | null>(null)
   const footerRef = useRef<HTMLElement | null>(null)
 
-  const [mainHeight, setMainHeight] = useState<number>()
+  // const [mainHeight, setMainHeight] = useState<number>()
 
-  useEffect(() => {
-    if (navRef && navRef.current && footerRef && footerRef.current) {
-      const docHeight = document.body.offsetHeight
-      const windowHeight = window.innerHeight || document.body.clientHeight
-      const maxHeight = Math.max(docHeight, windowHeight)
-      const navHeight = navRef.current.offsetHeight
-      const footerHeight = footerRef.current.offsetHeight
-      const fillNeeded = maxHeight - navHeight - footerHeight
-      setMainHeight(fillNeeded)
-    }
-  }, [navRef, footerRef])
+  // useEffect(() => {
+  //   if (navRef && navRef.current && footerRef && footerRef.current) {
+  //     const docHeight = document.body.offsetHeight
+  //     const windowHeight = window.innerHeight || document.body.clientHeight
+  //     const maxHeight = Math.max(docHeight, windowHeight)
+  //     const navHeight = navRef.current.offsetHeight
+  //     const footerHeight = footerRef.current.offsetHeight
+  //     const fillNeeded = maxHeight - navHeight - footerHeight
+  //     setMainHeight(fillNeeded)
+  //   }
+  // }, [navRef, footerRef])
 
   return (
     <>
       <Nav navRef={navRef} />
-      <div className="main-container" ref={mainRef} style={{ minHeight: `${mainHeight}px` }}>
+      <main className="main-container" ref={mainRef}
+      // style={{ minHeight: `${mainHeight}px` }}
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/code" element={<Projects />} />
@@ -49,7 +51,7 @@ function App() {
           <Route path="/contact" element={< Contact />} />
           <Route path="/*" element={<div>Error</div>} />
         </Routes>
-      </div>
+      </main>
       <Footer footerRef={footerRef} />
     </>
   )

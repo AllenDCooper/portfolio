@@ -8,7 +8,8 @@ import { useSearchParams } from 'react-router-dom';
 const projects_data = [
   {
     title: "tabbed figure",
-    url: "https://tabbed-figure-499308.gitlab.io/index.html#example/demo",
+    url: "https://interactives-kit-v2-5aeba1.gitlab.io/#/ecb7/exploration11-1",
+    superflex: true,
     shortDescription: "breaks down a chart, step by step, to help students better visualize, understand, and interpret a dataset",
     tags: [
       {
@@ -25,7 +26,8 @@ const projects_data = [
   },
   {
     title: "schematic figure",
-    url: "https://schematic-figure-bb507a.gitlab.io/index.html#ecb7/ch11-m5",
+    url: "https://schematic-figure-bb507a.gitlab.io/index.html#ecb7/ch11-m5_v2",
+    superflex: true,
     shortDescription: "provides a click-through exploration of a conceptual model, to help students better synthesize the workings of a system",
     tags: [
       {
@@ -114,29 +116,29 @@ const projects_data = [
     marginLeft: "0px",
     imageSrc: "./assets/writing-activity.png"
   },
-  {
-    title: "math formula",
-    url: "https://equation-converter-666653.gitlab.io/",
-    shortDescription: "a production kit for converting formulas created in Microsoft Word to MathML (web standard for accessibility and usability)",
-    tags: [
-      {
-        text: "React Typescript",
-        link: "https://vite.dev/"
-      },
-      {
-        text: "Norton Design System",
-        link: "https://wwnorton.github.io/design-system/"
-      },
-      {
-        text: "MathJax",
-        link: "https://www.mathjax.org/"
-      }
-    ],
-    description: "",
-    width: "800px",
-    marginLeft: "0px",
-    imageSrc: "./assets/math-converter.png"
-  },
+  // {
+  //   title: "math formula",
+  //   url: "https://equation-converter-666653.gitlab.io/",
+  //   shortDescription: "a production kit for converting formulas created in Microsoft Word to MathML (web standard for accessibility and usability)",
+  //   tags: [
+  //     {
+  //       text: "React Typescript",
+  //       link: "https://vite.dev/"
+  //     },
+  //     {
+  //       text: "Norton Design System",
+  //       link: "https://wwnorton.github.io/design-system/"
+  //     },
+  //     {
+  //       text: "MathJax",
+  //       link: "https://www.mathjax.org/"
+  //     }
+  //   ],
+  //   description: "",
+  //   width: "800px",
+  //   marginLeft: "0px",
+  //   imageSrc: "./assets/math-converter.png"
+  // },
   {
     title: "graphing model",
     url: "https://main.d2f8ifo7jr8kf0.amplifyapp.com/#/exponential",
@@ -208,7 +210,7 @@ const Projects = () => {
   return (
     <section className={styles["projects-container"]}>
       <h2 className="view-heading">Code</h2>
-      <p className="view-text">These are some of the software development kits (SDKs) I've developed at W. W. Norton & Company. These kits are vital building blocks for engaging readers and powering digital books that live. Over 400 interactives have been built and released with these kits.</p>
+      <p className="view-text">These are some of the software development kits (SDKs) I've developed at W. W. Norton & Company. These kits are vital building blocks for engaging readers and powering digital books that live. Over 400 interactives have been built and released with these kits. They are written primarily in <a href='https://react.dev/' target='_blank'>React</a> Typescript bootstrapped with <a href='https://vite.dev/' target='_blank'>Vite</a>.</p>
       {/* <p className="view-text">Most of these are microservices that are built into e-books and assessments.</p> */}
       {openProject ?
         <ProjectCard project={openProject} setOpenProject={setOpenProject} />

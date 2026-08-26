@@ -44,14 +44,28 @@ const ProjectCard = ({ project, setOpenProject }: reactProps) => {
           <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
         </div>
         {project.url ?
-          <IframeResizer
-            src={project.url}
-            scrolling={project.allowScroll}
-            style={{ width: project.width || DEFAULT_WIDTH, maxWidth: DEFAULT_MAX_WIDTH, height: project.height || DEFAULT_HEIGHT, border: "none", boxShadow: "none", backgroundColor: "transparent", marginLeft: project.marginLeft || "36px" }}
-          />
+          project.superflex ?
+            <iframe
+              src={project.url}
+              className={styles["iframe-superflex"]}
+            /> :
+            <IframeResizer
+              src={project.url}
+              scrolling={project.allowScroll}
+              style={{
+                flexGrow: 1,
+                width: project.width || DEFAULT_WIDTH,
+                maxWidth: DEFAULT_MAX_WIDTH,
+                height: project.height || DEFAULT_HEIGHT,
+                border: "none",
+                boxShadow: "none",
+                backgroundColor: "transparent",
+                // marginLeft: project.marginLeft || "36px"
+              }}
+            />
           :
           Array.isArray(project.imageSrc) && project.imageSrc.length > 1 ?
-            <div>
+            <div className={styles['img-container']}>
               {project.imageSrc.map((img, imgIndex) => (
                 typeof img === "string" ?
                   <div className={styles["img-carousel-wrapper"]} hidden={imgIndex !== curImage}>
@@ -60,7 +74,11 @@ const ProjectCard = ({ project, setOpenProject }: reactProps) => {
                         arrow_back_ios
                       </span>
                     </button>
-                    <img style={{ width: project.width || "auto" }} src={img} />
+                    <img
+                      className={styles['img']}
+                      style={{ width: project.width || "auto" }}
+                      src={img}
+                    />
                     <button className={styles["img-carousel-next-btn"]} onClick={() => handleImageChange(imgIndex, "next")} hidden={imgIndex + 1 === project.imageSrc.length}>
                       <span className="material-symbols-outlined">
                         arrow_forward_ios
@@ -74,9 +92,11 @@ const ProjectCard = ({ project, setOpenProject }: reactProps) => {
                         arrow_back_ios
                       </span>
                     </button>
-                    <div style={{ width: project.width || "auto" }}>
+                    <div>
                       {img.type === "embed" ?
-                        <iframe width="100%" height="420px" src={img.source} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                        <iframe
+                          className={styles["iframe"]}
+                          width="100%" height="420px" src={img.source} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                         :
                         <video
                           poster={img.poster ? img.poster : ""}
@@ -95,7 +115,12 @@ const ProjectCard = ({ project, setOpenProject }: reactProps) => {
             </div>
             :
             typeof project.imageSrc === "string" ?
-              <img style={{ width: project.width || "auto" }} src={project.imageSrc} />
+              <div className={styles['img-container']}>
+                <img
+                  className={styles["img"]}
+                  // style={{ width: project.width || "auto" }}
+                  src={project.imageSrc} />
+              </div>
               :
               null
         }

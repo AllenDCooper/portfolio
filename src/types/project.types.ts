@@ -1,6 +1,7 @@
 export type Project = {
     title: string,
     url: string,
+    superflex?: boolean,
     shortDescription: string,
     tags: Array<{
         text: string,

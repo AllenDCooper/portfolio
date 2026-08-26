@@ -12,7 +12,7 @@ const ConceptCard = ({ project, setOpenProject }: reactProps) => {
   console.log(project)
   // const DEFAULT_WIDTH = "728px";
   // const DEFAULT_MAX_WIDTH = "100vw";
-  const DEFAULT_HEIGHT = "600px";
+  // const DEFAULT_HEIGHT = "600px";
 
   const [curImage, setCurImage] = useState<number>(0)
 
@@ -43,12 +43,19 @@ const ConceptCard = ({ project, setOpenProject }: reactProps) => {
           <p dangerouslySetInnerHTML={{ __html: project.description }}></p>
         </div>
         {project.gif ?
-          <img src={project.gif}
-            style={{ width: project.width || "auto", height: project.height || DEFAULT_HEIGHT, border: "none", boxShadow: "none", backgroundColor: "transparent", marginLeft: project.marginLeft || "36px" }}
-          />
+          <div className={styles["img-container"]}>
+            <img src={project.gif}
+              className={styles["project-card-img"]}
+              style={{
+                width: project.width || "auto",
+                height: project.height,
+                // marginLeft: project.marginLeft || "36px"
+              }}
+            />
+          </div>
           :
           Array.isArray(project.gif) && project.gif.length > 1 ?
-            <div>
+            <div className={styles["img-container"]}>
               {project.gif.map((img, imgIndex) => (
                 typeof img === "string" ?
                   <div className={styles["img-carousel-wrapper"]} hidden={imgIndex !== curImage}>
@@ -57,7 +64,11 @@ const ConceptCard = ({ project, setOpenProject }: reactProps) => {
                         arrow_back_ios
                       </span>
                     </button>
-                    <img style={{ width: project.width || "auto" }} src={img} />
+                    <img
+                      className={styles['img']}
+                      style={{ width: project.width || "auto" }}
+                      src={img}
+                    />
                     <button className={styles["img-carousel-next-btn"]} onClick={() => handleImageChange(imgIndex, "next")} hidden={imgIndex + 1 === project.thumbnail.length}>
                       <span className="material-symbols-outlined">
                         arrow_forward_ios
@@ -73,7 +84,9 @@ const ConceptCard = ({ project, setOpenProject }: reactProps) => {
                     </button>
                     <div style={{ width: project.width || "auto" }}>
                       {img.type === "embed" ?
-                        <iframe width="100%" height="420px" src={img.source} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                        <iframe
+                          className={styles['iframe']}
+                          width="100%" height="420px" src={img.source} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                         :
                         <video
                           poster={img.poster ? img.poster : ""}

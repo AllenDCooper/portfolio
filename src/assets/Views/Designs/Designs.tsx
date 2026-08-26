@@ -20,18 +20,31 @@ const projects_data = [
     thumbnail: "./assets/designs/learning-coachA.png"
   },
   {
-    title: "Stories",
-    gif: "./assets/designs/learning-coach2.gif",
-    shortDescription: "A multimedia visual storytelling concept for a psychology product",
+    title: "Learning Module",
+    gif: "./assets/designs/ebook2.gif",
+    shortDescription: "A concept for a textbook module",
     tags: [
       {
         text: "Prototype",
         link: ""
       }
     ],
-    description: "Concept for an alternative approach to scrolling ebook.",
-    thumbnail: "./assets/designs/learning-coach2.png"
+    description: "A modular approach to an ebook design that avoids long scrolling of text",
+    thumbnail: "./assets/designs/ebook2.png"
   },
+  // {
+  //   title: "Stories",
+  //   gif: "./assets/designs/learning-coach2.gif",
+  //   shortDescription: "A multimedia visual storytelling concept for a psychology product",
+  //   tags: [
+  //     {
+  //       text: "Prototype",
+  //       link: ""
+  //     }
+  //   ],
+  //   description: "Concept for an alternative approach to scrolling ebook.",
+  //   thumbnail: "./assets/designs/learning-coach2.png"
+  // },
   {
     title: "Scrollytelling",
     gif: "./assets/designs/scrollytelling2.gif",
@@ -74,6 +87,19 @@ const projects_data = [
     ],
     description: "Includes experimental scroll events to snap figure in viewport",
     thumbnail: "./assets/designs/tabbed-figure_v2.png"
+  },
+  {
+    title: "Tabbed Figure 3",
+    gif: "./assets/designs/tabbed-figure4.gif",
+    shortDescription: "Art figure with motion events",
+    tags: [
+      {
+        text: "Prototype",
+        link: ""
+      }
+    ],
+    description: "Motion events turned off automatically for prefers-reduced-motion (accessibility)",
+    thumbnail: "./assets/designs/tabbed-figure4.png"
   },
   {
     title: "Schematic Figure",

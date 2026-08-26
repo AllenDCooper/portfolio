@@ -7,9 +7,16 @@ body {
   margin: 0px;
 }
 
-/* .main-container {
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.main-container {
   margin: 0 12px;
-} */
+  flex-grow: 1;
+}
 
 .view-heading {
   text-align: center;

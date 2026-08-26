@@ -72,3 +72,13 @@
   /* position: absolute; */
   bottom: 0px;
 }
+
+a {
+  text-decoration: none;
+  /* color: teal; */
+  color: teal;
+}
+
+a:hover {
+  background: #efefef;
+}
