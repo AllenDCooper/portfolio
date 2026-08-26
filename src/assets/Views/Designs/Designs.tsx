@@ -7,6 +7,74 @@ import ConceptCard from '../../Components/ConceptCard/ConceptCard';
 
 const projects_data = [
   {
+    title: "Tabbed Figure 1",
+    gif: "./assets/designs/tabbed-figure3.gif",
+    shortDescription: "Map image dynamically controlled with UI inputs",
+    tags: [
+      {
+        text: "Prototype",
+        link: ""
+      },
+      {
+        text: "Production",
+        link: ""
+      }
+    ],
+    description: "Transformed a static image to a dynamic, clickable figure",
+    thumbnail: "./assets/designs/tabbed-figure3.png"
+  },
+  {
+    title: "Tabbed Figure 2",
+    gif: "./assets/designs/tabbed-figure_v2.gif",
+    shortDescription: "Biology figure dynamically controlled with UI inputs",
+    tags: [
+      {
+        text: "Prototype",
+        link: ""
+      },
+      {
+        text: "Production",
+        link: ""
+      }
+    ],
+    description: "Includes experimental scroll events to snap figure in viewport",
+    thumbnail: "./assets/designs/tabbed-figure_v2.png"
+  },
+  {
+    title: "Tabbed Figure 3",
+    gif: "./assets/designs/tabbed-figure4.gif",
+    shortDescription: "Art figure with motion events",
+    tags: [
+      {
+        text: "Prototype",
+        link: ""
+      },
+      {
+        text: "Production",
+        link: ""
+      }
+    ],
+    description: "Motion events turned off automatically for prefers-reduced-motion (accessibility)",
+    thumbnail: "./assets/designs/tabbed-figure4.png"
+  },
+  {
+    title: "Tabbed Figure CMS",
+    gif: "./assets/designs/cms.gif",
+    shortDescription: "Authoring platform for building tabbed-figures",
+    tags: [
+      {
+        text: "Prototype",
+        link: ""
+      },
+      {
+        text: "Production",
+        link: ""
+      }
+    ],
+    description: "Allows producers, editors, or authors to create or update tabbed-figures",
+    thumbnail: "./assets/designs/cms.png"
+  },
+  {
     title: "Learning App",
     gif: "./assets/designs/learning-coachA.gif",
     shortDescription: "A concept for a textbook app",
@@ -32,19 +100,19 @@ const projects_data = [
     description: "A modular approach to an ebook design that avoids long scrolling of text",
     thumbnail: "./assets/designs/ebook2.png"
   },
-  // {
-  //   title: "Stories",
-  //   gif: "./assets/designs/learning-coach2.gif",
-  //   shortDescription: "A multimedia visual storytelling concept for a psychology product",
-  //   tags: [
-  //     {
-  //       text: "Prototype",
-  //       link: ""
-  //     }
-  //   ],
-  //   description: "Concept for an alternative approach to scrolling ebook.",
-  //   thumbnail: "./assets/designs/learning-coach2.png"
-  // },
+  {
+    title: "Stories",
+    gif: "./assets/designs/learning-coach2.gif",
+    shortDescription: "A multimedia visual storytelling concept for a psychology product",
+    tags: [
+      {
+        text: "Prototype",
+        link: ""
+      }
+    ],
+    description: "Concept for an alternative approach to scrolling ebook.",
+    thumbnail: "./assets/designs/learning-coach2.png"
+  },
   {
     title: "Scrollytelling",
     gif: "./assets/designs/scrollytelling2.gif",
@@ -59,9 +127,9 @@ const projects_data = [
     thumbnail: "./assets/designs/scrollytelling2.png"
   },
   {
-    title: "Tabbed Figure 1",
-    gif: "./assets/designs/tabbed-figure3.gif",
-    shortDescription: "Map image dynamically controlled with UI inputs",
+    title: "Schematic Figure",
+    gif: "./assets/designs/schematic-figure_v2-compressed.gif",
+    shortDescription: "SVG cell figure events control css zoom/transform of detailed cell image",
     tags: [
       {
         text: "Prototype",
@@ -69,45 +137,6 @@ const projects_data = [
       },
       {
         text: "Production",
-        link: ""
-      }
-    ],
-    description: "Transformed a static image to a dynamic, clickable figure",
-    thumbnail: "./assets/designs/tabbed-figure3.png"
-  },
-  {
-    title: "Tabbed Figure 2",
-    gif: "./assets/designs/tabbed-figure_v2.gif",
-    shortDescription: "Biology figure dynamically controlled with UI inputs",
-    tags: [
-      {
-        text: "Prototype",
-        link: ""
-      }
-    ],
-    description: "Includes experimental scroll events to snap figure in viewport",
-    thumbnail: "./assets/designs/tabbed-figure_v2.png"
-  },
-  {
-    title: "Tabbed Figure 3",
-    gif: "./assets/designs/tabbed-figure4.gif",
-    shortDescription: "Art figure with motion events",
-    tags: [
-      {
-        text: "Prototype",
-        link: ""
-      }
-    ],
-    description: "Motion events turned off automatically for prefers-reduced-motion (accessibility)",
-    thumbnail: "./assets/designs/tabbed-figure4.png"
-  },
-  {
-    title: "Schematic Figure",
-    gif: "./assets/designs/schematic-figure_v2-compressed.gif",
-    shortDescription: "SVG cell figure events control css zoom/transform of detailed cell image",
-    tags: [
-      {
-        text: "Prototype",
         link: ""
       }
     ],
